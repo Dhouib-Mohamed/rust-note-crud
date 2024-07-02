@@ -1,0 +1,19 @@
+[package]
+name = "RustCRUD"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.5"
+ctor = "0.2.8"
+dotenv = "0.15.0"
+sqlx = { version = "0.7.4", features = ["runtime-async-std-native-tls", "postgres", "chrono", "uuid"] }
+tokio = { version = "1.38.0", features = ["rt", "rt-multi-thread", "macros"] }
+tower-http = { version = "0.5.2", features = ["cors"] }
+serde_json = "1.0.119"
+serde = { version = "1.0.203", features = ["derive"] }
+uuid = { version = "1.9.1", features = ["serde", "v4"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+log = "0.4.22"
